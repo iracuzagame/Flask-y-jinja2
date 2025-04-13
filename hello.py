@@ -9,7 +9,8 @@ app = Flask(__name__)
 def index():
     name = None
     # name = 'Abel' se puede agregar un valor a la variable al igual que mandarlo con none
-    return render_template('index.html', name = name)
+    friends = ['Manuel','Beto', 'Carlos', 'Michel']
+    return render_template('index.html', name = name, friends = friends)
 
 @app.route('/hello')
 @app.route('/hello/<name>')
